@@ -12,6 +12,10 @@ public class EmployeeWage {
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage computation program");
+        computeEmpWage();
+    }
+
+    public static int computeEmpWage() {
         int empPresent = (int) (Math.floor(Math.random() * 10) % 3);
         int dayCount = 1;
         int workingHours = 0;
@@ -39,5 +43,6 @@ public class EmployeeWage {
         }
         System.out.println("working Hours: " + workingHours);
         System.out.println("Total wage: " + totalWage);
+        return totalWage;
     }
 }
