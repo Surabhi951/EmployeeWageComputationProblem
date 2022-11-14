@@ -2,22 +2,21 @@ package com.bridgelabz;
 
 public class EmployeeWage {
 
-    static final int WAGE_PER_HOUR = 20;
     static final int FULL_DAY_HOUR = 8;
     static final int PART_TIME__HOUR = 4;
     static final int IS_FULL_TIME = 2;
     static final int IS_PART_TIME = 1;
-    static final int WORKING_DAY_PER_MONTH = 20;
-    static final int WORKING_HOUR_PER_MONTH = 100;
-
-
+    
     public static void main(String[] args) {
-        System.out.println("Welcome to employee wage computation program");
+        System.out.println("Welcome to employee wage computation");
         EmployeeWage employeeWage = new EmployeeWage();
-        employeeWage.computeEmpWage();
+        employeeWage.computeEmpWage("Amazon", 20, 2, 10 );
+        employeeWage.computeEmpWage("Meesho", 10, 4, 20 );
+        employeeWage.computeEmpWage("Reliance", 10, 3, 10 );
+        employeeWage.computeEmpWage("Flipcart", 15, 5, 30 );
     }
 
-    public int computeEmpWage() {
+    public int computeEmpWage(String company, int WAGE_PER_HOUR, int WORKING_DAY_PER_MONTH, int WORKING_HOUR_PER_MONTH) {
         int empPresent = (int) (Math.floor(Math.random() * 10) % 3);
         int dayCount = 1;
         int workingHours = 0;
