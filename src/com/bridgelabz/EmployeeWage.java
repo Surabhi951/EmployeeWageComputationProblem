@@ -10,6 +10,7 @@ public class EmployeeWage {
     static final int WORKING_DAY_PER_MONTH = 20;
     static final int WORKING_HOUR_PER_MONTH = 100;
 
+
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage computation program");
         EmployeeWage employeeWage = new EmployeeWage();
@@ -39,11 +40,11 @@ public class EmployeeWage {
                     System.out.println("Employee is Absent");
             }
             totalWage += empWage;
-            System.out.println("Employee daily wage Day : " + dayCount + " => " + empWage);
+            System.out.println("Employee daily wage Day: " + dayCount + " => " + empWage);
             dayCount++;
         }
         System.out.println("working Hours: " + workingHours);
-        System.out.println("Total wage: " + totalWage);
+        System.out.println("Total wage for company: " + company + " is: " + totalWage);
         return totalWage;
     }
 }
