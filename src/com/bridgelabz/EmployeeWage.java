@@ -6,7 +6,7 @@ public class EmployeeWage {
     static final int PART_TIME__HOUR = 4;
     static final int IS_FULL_TIME = 2;
     static final int IS_PART_TIME = 1;
-
+    
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage computation");
         EmployeeWage employeeWage = new EmployeeWage();
@@ -39,7 +39,7 @@ public class EmployeeWage {
                     System.out.println("Employee is Absent");
             }
             totalWage += empWage;
-            System.out.println("Employee daily wage Day : " + dayCount + " => " + empWage);
+            System.out.println("Employee daily wage Day: " + dayCount + " => " + empWage);
             dayCount++;
         }
         System.out.println("working Hours: " + workingHours);
