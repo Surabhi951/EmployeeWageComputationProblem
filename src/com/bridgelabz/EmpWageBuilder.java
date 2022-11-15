@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class EmpWageBuilder {
+public class EmpWageBuilder implements ICompanyWage {
 
     static final int FULL_DAY_HOUR = 8;
     static final int PART_TIME__HOUR = 4;
@@ -10,18 +10,18 @@ public class EmpWageBuilder {
     int noOfCompany = 0;
     CompanyEmpWage[] companyEmpWages = new CompanyEmpWage[5];
 
-    void addCompanyEmpWage(String company, int wagePerHour, int workingDayPerMonth, int workingHourPerMonth) {
+    public void addCompanyEmpWage(String company, int wagePerHour, int workingDayPerMonth, int workingHourPerMonth) {
         companyEmpWages[noOfCompany] = new CompanyEmpWage(company,wagePerHour,workingDayPerMonth,workingHourPerMonth);
         noOfCompany++;
     }
 
-    void computeEmpWage(){
-        for(int i = 0; i < noOfCompany; i++){
+    public void computeEmpWage() {
+        for(int i = 0; i < noOfCompany; i++) {
             computeEmpWage(companyEmpWages[i]);
         }
     }
 
-    void computeEmpWage(CompanyEmpWage companyEmpWage){
+    void computeEmpWage(CompanyEmpWage companyEmpWage) {
         int empPresent = (int) (Math.floor(Math.random() * 10) % 3);
         int dayCount = 1;
         int workingHours = 0;
